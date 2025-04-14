@@ -8,7 +8,7 @@ export const login = async (req: Request, res: Response) => {
   const { username, password } = req.body;
 
   const user = await User.findOne({
-    where: { username },
+    where: { username: username },
   });
   if (!user) {
     return res.status(401).json({ message: 'Authentication failed'});
@@ -16,12 +16,12 @@ export const login = async (req: Request, res: Response) => {
 
   const passwordIsValid = await bcrypt.compare(password, user.password);
   if(!passwordIsValid) {
-    return res.status(41).json({message: 'Authication failed'});
+    return res.status(401).json({message: 'Authication failed'});
 
   }
   const secretKey = process.env.JWT_SECRET_KEY || '';
 
-  const token = jwt.sign({ username}, secretKey, { expiresIn: '1h'});
+  const token = jwt.sign({ username: user.username }, secretKey as string, { expiresIn: '1h'});
 
   return res.json({ token });
 };
