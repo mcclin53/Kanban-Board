@@ -5,7 +5,7 @@ const API_BASE = 'https://kanban-board-kmym.onrender.com';
 const login = async (userInfo: UserLogin) => {
   // TODO: make a POST request to the login route
   try {
-    const response = await fetch('${API_BASE}/auth/login', {
+    const response = await fetch(`${API_BASE}/auth/login`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
