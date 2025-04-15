@@ -10,10 +10,12 @@
   - [Tests](#tests)
   - [License](#license)
   - [Questions](#questions)
-  
+
   ## Description
 A dashboard that allows the user to view and manage different tasks.
-![Screenshot](https://github.com/mcclin53/Weather-Dashboard/blob/main/Assets/Screenshot%202025-04-09%20233332.jpg?raw=true)
+![Screenshot](https://github.com/mcclin53/Kanban-Board/blob/main/client/public/LoginScreenshot.jpg?raw=true)
+
+![Screenshot](https://github.com/mcclin53/Kanban-Board/blob/main/client/public/DashboardScreenshot.jpg?raw=true)
 
 (https://kanban-board-kmym.onrender.com/)
 
